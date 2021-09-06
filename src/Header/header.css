@@ -49,4 +49,5 @@
 }
 .headerRight i {
   cursor: pointer;
+  margin-left: 10px;
 }
