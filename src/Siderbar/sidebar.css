@@ -29,8 +29,10 @@
   margin-bottom: 20px;
 }
 
-.sidebarText {
+.sidebarDesc {
   margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 300;
 }
 
 .sidebarList {
@@ -42,6 +44,7 @@
   display: inline-block;
   width: 50%;
   margin-top: 10px;
+  font-size: 18px;
 }
 
 .sidebarSocial {

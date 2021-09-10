@@ -1,0 +1,50 @@
+.post {
+  width: 380px;
+  margin: 20px;
+}
+.postImg img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.postInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.postCats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  color: #ffb900;
+}
+.postCat {
+  margin: 5px;
+}
+.postTitle {
+  font-family: "Kaushan Script";
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.postTitle,
+.postPublish {
+  margin-bottom: 10px;
+}
+
+.postPublish {
+  font-size: 18px;
+  font-style: italic;
+  color: #ccc;
+}
+.postDesc {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  font-size: 16px;
+  font-weight: 300;
+}

@@ -1,13 +1,15 @@
 #Header {
   font-family: "Open Sans";
   width: 100%;
-  height: 50px;
+  height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   position: sticky;
   top: 0;
+  z-index: 999;
+  background-color: #fff;
 }
 .headerLeft {
   flex: 3;
