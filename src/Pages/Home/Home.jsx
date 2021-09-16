@@ -1,7 +1,7 @@
 import './home.css';
-import Hero from '../../Hero/Hero';
-import Posts from '../../Posts/Posts';
-import Siderbar from '../../Siderbar/Siderbar';
+import Hero from '../../Components/Hero/Hero';
+import Posts from '../../Components/Posts/Posts';
+import Siderbar from '../../Components/Siderbar/Siderbar';
 
 export default function Home() {
     return (

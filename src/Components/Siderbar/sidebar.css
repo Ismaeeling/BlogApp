@@ -35,6 +35,11 @@
   font-weight: 300;
 }
 
+.sidebarDesc,
+.sidebarList {
+  font-family: Roboto;
+}
+
 .sidebarList {
   list-style: none;
   margin-bottom: 20px;
