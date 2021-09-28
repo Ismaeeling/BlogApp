@@ -49,3 +49,9 @@
   font-family: Roboto;
   line-height: 25px;
 }
+.singlePostDesc::first-letter {
+  font-weight: 500;
+  font-size: 40px;
+  margin-left: 10px;
+  font-family: "Times New Roman", Times, serif;
+}

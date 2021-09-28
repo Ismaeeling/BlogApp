@@ -1,0 +1,77 @@
+.settings {
+  display: flex;
+  padding: 20px;
+}
+.settingsContainer {
+  flex: 9;
+  padding-right: 20px;
+}
+.settingsTopHeading {
+  display: flex;
+  align-items: center;
+}
+.settingsHeading {
+  flex: 1;
+  font-family: Roboto;
+  font-size: 30px;
+  color: #ffb900;
+}
+.settingsDelete {
+  background-color: transparent;
+  font-size: 16px;
+  font-weight: 500;
+  color: tomato;
+  border: 0;
+}
+.settingsProfile {
+  display: flex;
+  align-items: center;
+  padding-top: 20px;
+}
+.settingsProfileImg {
+  width: 100px;
+  border-radius: 10px;
+}
+.settingsProfileIcon {
+  margin-left: 10px;
+  font-size: 40px;
+}
+.settingsProfileData {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.settingsProfileData label {
+  font-family: Roboto;
+  font-size: 16px;
+  color: #666;
+}
+.settingsProfileData input {
+  padding: 10px 0;
+  border: none;
+  border-bottom: 1px solid rgb(192, 192, 192);
+  margin-bottom: 15px;
+  font-family: "Open Sans";
+  font-size: 16px;
+  font-weight: 500;
+  color: rgb(71, 71, 71);
+}
+.settingsProfileData input:focus {
+  outline: none;
+}
+.settingsUpdate {
+  font-family: "Open Sans";
+  font-size: 16px;
+  background-color: teal;
+  font-weight: 400;
+  color: #fff;
+  padding: 10px 20px;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  justify-content: center;
+}
+.settingsFormButton {
+  display: flex;
+  justify-content: center;
+}

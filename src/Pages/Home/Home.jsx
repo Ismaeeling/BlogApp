@@ -1,7 +1,7 @@
 import './home.css';
 import Hero from '../../Components/Hero/Hero';
 import Posts from '../../Components/Posts/Posts';
-import Siderbar from '../../Components/Siderbar/Siderbar';
+import Sidebar from '../../Components/Sidebar/Sidebar';
 
 export default function Home() {
     return (
@@ -9,7 +9,7 @@ export default function Home() {
         <Hero />
         <div className="home">
             <Posts />
-            <Siderbar />
+            <Sidebar />
         </div>
         </>
     )

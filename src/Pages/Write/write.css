@@ -1,0 +1,63 @@
+.write {
+  width: 85%;
+  margin: auto;
+  padding-top: 20px;
+}
+.writeForm {
+  position: relative;
+}
+
+.formImg {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.writeFormGroup {
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.writeFormIcon {
+  width: 25px;
+  height: 25px;
+  border: 1px solid;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #666;
+}
+.writeTitle {
+  font-family: Roboto;
+  font-size: 23px;
+  font-weight: 400;
+  border: none;
+  padding-left: 10px;
+}
+.writeText {
+  font-family: "Open Sans";
+  font-size: 20px;
+  font-weight: 400;
+  border: none;
+  padding-left: 10px;
+}
+input.writeTitle:focus,
+input.writeText:focus {
+  outline: none;
+}
+.writeSubmit {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  font-family: "Open Sans";
+  font-size: 16px;
+  background-color: teal;
+  font-weight: 400;
+  color: #fff;
+  padding: 10px 20px;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
