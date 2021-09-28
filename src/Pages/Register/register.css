@@ -1,0 +1,60 @@
+.register {
+  height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(https://images.unsplash.com/photo-1429216967620-ece20ff3a5f9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1176&q=80);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.registerTitle {
+  font-size: 60px;
+  font-family: "Kaushan Script";
+  color: rgb(230, 230, 230);
+}
+.registerForm {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  font-family: Roboto;
+}
+.registerForm > label {
+  font-size: 16px;
+  color: rgb(230, 230, 230);
+  padding-left: 2px;
+}
+.registerForm > input {
+  padding: 10px;
+  margin: 5px 0 10px;
+  border: 0;
+  border-radius: 5px;
+}
+.registerLoginButton {
+  font-family: "Open Sans";
+  font-size: 16px;
+  background-color: teal;
+  font-weight: 400;
+  color: #fff;
+  padding: 5px;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.loginRegisterButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-family: "Open Sans";
+  font-size: 16px;
+  background-color: lightcoral;
+  font-weight: 400;
+  color: #fff;
+  padding: 10px 20px;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
