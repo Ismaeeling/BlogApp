@@ -2,18 +2,22 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
+const authRoute = require("./routes/auth");
+const userRoute = require("./routes/users");
+const postRoute = require("./routes/posts");
 
 dotenv.config();
-mongoose.connect(process.env.MONGO_URL, {
-    useNewUrlParser: true,
-    useUnitfiedTopology: true, 
-    useCreateIndex: true,
-}).then(console.log("DB connected")).catch(err=>console.log(err));
+app.use(express.json());
+
+const URL = process.env.MONOGO_URL;
+
+mongoose.connect(URL)
+.then(console.log("DB connected")).catch(err=>console.log(err));
 
 
-app.use("/a", (req,res)=>{
-    console.log("hala bik hala")
-});
+app.use("/api/auth", authRoute);
+app.use("/api/users", userRoute);
+app.use("/api/posts", postRoute);
 
 app.listen("5000", () => {
     console.log("Backend is ready");
