@@ -65,8 +65,9 @@ router.get("/", async(req,res)=>{
             posts = await Post.find({username});
         }else if (cat){
             posts = await Post.find({categories:{
-                $in:[cat]
-            }});
+                $in:[cat],
+            },
+        });
         }else{
             posts = await Post.find();
         }
