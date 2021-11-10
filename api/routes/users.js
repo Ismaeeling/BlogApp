@@ -2,6 +2,17 @@ const router = require("express").Router();
 const User = require("../models/User");
 const bcrypt = require('bcrypt');
 
+//NEW USER
+router.post("/",async(req,res)=>{
+    const userData = await User(req.body);
+    try{
+        const newUser = await userData.save();
+        res.status(200).json(newUser);
+    }catch(err){
+        res.status(500).json(err);
+    }
+});
+
 //UPDATE
 router.put("/:id", async (req, res)=>{
     if (req.body.userId === req.params.id){
