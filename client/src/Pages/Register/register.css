@@ -58,3 +58,8 @@
   border-radius: 5px;
   cursor: pointer;
 }
+.error-msg {
+  color: red;
+  margin-top: 15px;
+  font-family: Roboto;
+}

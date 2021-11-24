@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import  "./header.css";
 
 function Header() {
-    const user = true;
+    const user = false;
     return (
         <div id="Header">
             <div className="headerLeft">
