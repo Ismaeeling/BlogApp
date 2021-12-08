@@ -2,6 +2,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import Single from './Pages/Single/Single';
+import {ContextProvider} from "./Context/Context"
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(
+    <ContextProvider>
+        <App /> 
+    </ContextProvider>,
+    document.getElementById("root")
+);
