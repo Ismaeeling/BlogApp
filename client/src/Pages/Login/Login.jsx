@@ -9,7 +9,7 @@ export default function Login() {
     const passRef = useRef();
     const { user, dispatch, isFetching } = useContext(Context);
 
-    const submitLogin = async (e)=>{
+    const submitLogin = async (e) => {
         e.preventDefault();
         dispatch({type: "LOGIN_START"});
         try{
