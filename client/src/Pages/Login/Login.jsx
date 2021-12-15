@@ -27,10 +27,10 @@ export default function Login() {
             <span className="loginTitle">Login</span>
                 <form className="loginForm" onSubmit={submitLogin}>
                     <label>Username</label>
-                    <input type="text" placeholder="Enter your email..." ref={userRef}/>
+                    <input type="text" placeholder="Enter your username..." ref={userRef}/>
                     <label>Password</label>
                     <input type="password" placeholder="Enter your password..." ref={passRef}/>
-                    <button className="loginButton" type="submit">Login</button>
+                    <button className="loginButton" type="submit" disabled={isFetching}>Login</button>
                 </form>
                 <button className="registerButton" >
                     <Link to="/register" className="link">Register</Link>

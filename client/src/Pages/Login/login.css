@@ -47,6 +47,12 @@
   cursor: pointer;
   margin-top: 10px;
 }
+
+.loginButton:disabled {
+  background-color: rgb(255, 162, 162);
+  cursor: not-allowed;
+}
+
 .registerButton {
   position: absolute;
   top: 20px;

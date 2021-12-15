@@ -1,8 +1,14 @@
 import { Link } from "react-router-dom";
+import { Context } from "../../Context/Context";
+import { useContext } from "react";
 import  "./header.css";
 
 function Header() {
-    const user = false;
+    const {user, dispatch} = useContext(Context);
+
+    const logoutHandler= ()=>{
+        dispatch({type:"LOGOUT"});
+    }
     return (
         <div id="Header">
             <div className="headerLeft">
@@ -25,13 +31,13 @@ function Header() {
                     <li className="menuListItem">
                         <Link to="/write" className="link">WRITE</Link>
                     </li>
-                    <li className="menuListItem">
-                        {user && <Link to="/logout" className="link">LOGOUT</Link> }
+                    <li className="menuListItem" onClick={logoutHandler}>
+                        {user && "LOGOUT"}
                     </li>
                 </ul>
             </div>
             <div className="headerRight">
-                {user ? (<img className="profileImg" src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80" alt="" />):
+                {user ? (<img className="profileImg" src={user.profilePic} alt="" />):
                  <ul className="menuList">
                     <li className="menuListItem">
                         <Link to="/login" className="link">LOGIN</Link>
