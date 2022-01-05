@@ -9,6 +9,7 @@ export default function SinglePost() {
     const location = useLocation();
     const path = location.pathname.split("/")[2];
     const [post,setPost] = useState([]);
+    const PF = "http://localhost:5000/images/"
     
     useEffect(() => {
         const getPost = async ()=>{
@@ -20,7 +21,7 @@ export default function SinglePost() {
     return (
         <div className="singlePost">
             {post.photo &&
-            <img src="https://www.topgear.com/sites/default/files/images/news-article/2019/09/8b9981f2be8ad1d2c90af3dfb83e4f74/02_ss300p_3i4_front.jpg" alt="" className="singlePostImg" />
+            <img src={PF + post.photo} alt="" className="singlePostImg" />
             }
             <div className="singlePostInfo">
                 <div className="singlePostTitle">
