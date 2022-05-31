@@ -13,11 +13,16 @@ export default function SinglePost() {
     const [post,setPost] = useState([]);
     const PF = "http://localhost:5000/images/";
     const {user} = useContext(Context);
+    const [title, setTitle] = useState("");
+    const [desc, setDesc] = useState("");
+    const [updateMode, setUpdateMode] = useState(false);
     
     useEffect(() => {
         const getPost = async ()=>{
             const res = await axios.get("/posts/" +path);
             setPost(res.data);
+            setTitle(res.data.title);
+            setDesc(res.data.desc);
         } 
         getPost();
     }, [path]);
@@ -32,21 +37,37 @@ export default function SinglePost() {
             
         }
     }
+
+    const handleUpdate = async()=>{
+        try {
+            await axios.put(`/posts/${post._id}`,{
+                username: user.username,
+                title,
+                desc
+            });
+            // window.location.reload();
+            setUpdateMode(false);
+        } catch (err) {
+            
+        }
+    }
     return (
         <div className="singlePost">
             {post.photo &&
             <img src={PF + post.photo} alt="" className="singlePostImg" />
             }
             <div className="singlePostInfo">
-                <div className="singlePostTitle">
-                    <span>{post.title}</span>
-                    {post.username === user?.username && (
-                    <div className="singlePostActions">
-                        <i className="far fa-edit"></i>
-                        <i className="far fa-trash-alt" onClick={handleDelete}></i>
+                {updateMode ? <input type="text" value={title} onChange={(e)=>{setTitle(e.target.value)}} className="singlePostTitleInput" autoFocus/> : (
+                    <div className="singlePostTitle">
+                        <span>{title}</span>
+                        {post.username === user?.username && (
+                        <div className="singlePostActions">
+                            <i className="far fa-edit" onClick={()=>setUpdateMode(true)}></i>
+                            <i className="far fa-trash-alt" onClick={handleDelete}></i>
+                        </div>
+                        )}
                     </div>
-                    )}
-                </div>
+                )}
                 <div className="singlePostAuth">
                     <span className="singlePostAuthor">
                         Author: 
@@ -58,9 +79,13 @@ export default function SinglePost() {
                         {new Date(post.createdAt).toDateString()}
                     </span>
                 </div>
+                { updateMode ? <textarea value={desc} onChange={(e)=>{setDesc(e.target.value)}} className="singlePostDescInput"/> : (
                 <p className="singlePostDesc">
-                {post.desc}
+                {desc}
                 </p>
+                )}
+                {updateMode && <button className="singlePostUpdate" onClick={handleUpdate}>Update</button> }
+                
             </div>
         </div>
     )

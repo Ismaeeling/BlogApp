@@ -37,7 +37,11 @@ function Header() {
                 </ul>
             </div>
             <div className="headerRight">
-                {user ? (<img className="profileImg" src={user.profilePic} alt="" />):
+                {user ? (
+                <Link to="/settings">
+                    <img className="profileImg" src={user.profilePic} alt="" />
+                </Link>
+                ):
                  <ul className="menuList">
                     <li className="menuListItem">
                         <Link to="/login" className="link">LOGIN</Link>

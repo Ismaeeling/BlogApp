@@ -1,7 +1,10 @@
 import './settings.css'
 import Sidebar from '../../Components/Sidebar/Sidebar'
+import { useContext } from 'react'
+import { Context } from '../../Context/Context'
 
 export default function Settings() {
+    const {user} = useContext(Context);
     return (
         <div className="settings">
             <div className="settingsContainer">
@@ -11,7 +14,7 @@ export default function Settings() {
                 </div>
                 <form action="" className="settingsForm">
                     <div className="settingsProfile">
-                    <img className="settingsProfileImg" src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80" alt="" />
+                    <img className="settingsProfileImg" src={user.profilePic} alt="" />
                     <label htmlFor="ProfileFile">
                         <i className="far fa-user-circle settingsProfileIcon"></i>
                     </label>

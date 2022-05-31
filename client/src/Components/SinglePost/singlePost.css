@@ -4,12 +4,32 @@
 }
 .singlePostImg {
   width: 100%;
+  height: 50vh;
+  object-fit: cover;
+  object-position: center center;
   border-radius: 10px;
 }
 .singlePostTitle {
   display: flex;
   align-items: center;
   padding-top: 20px;
+}
+.singlePostTitleInput {
+  font-family: "Kaushan Script";
+  font-size: 25px;
+  font-weight: 700;
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid #d9d9d9;
+  padding: 10px 0;
+  color: #787878;
+}
+.singlePostInfo {
+  display: flex;
+  flex-direction: column;
+}
+.singlePostTitleInput:focus {
+  outline: none;
 }
 .singlePostTitle span {
   font-family: "Kaushan Script";
@@ -26,7 +46,6 @@
   margin-left: 7px;
   cursor: pointer;
 }
-
 .fa-trash-alt {
   color: tomato;
 }
@@ -55,4 +74,31 @@
   font-size: 40px;
   margin-left: 10px;
   font-family: "Times New Roman", Times, serif;
+}
+.singlePostDescInput {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid #d9d9d9;
+  margin-top: 10px;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 300;
+  color: #787878;
+}
+.singlePostDescInput:focus {
+  outline: none;
+}
+.singlePostUpdate {
+  width: 100px;
+  margin-top: 20px;
+  background-color: teal;
+  color: #fff;
+  border: 0;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: "Roboto";
+  font-size: 14px;
+  font-weight: 400;
+  align-self: flex-end;
+  cursor: pointer;
 }
